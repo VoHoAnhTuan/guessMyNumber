@@ -1,13 +1,12 @@
 'use strict';
 
-// console.log(document.querySelector('.message').textContent);
-// document.querySelector('.message').textContent = 'Correct Number!';
 
 let value = Math.trunc(Math.random() * 20) + 1;
 let score = document.querySelector('.score').textContent = 10;
 let highscore = 0;
 document.querySelector('.number').textContent = '?';
 
+// function to update score after each guess
 function updateScore() {
     score--;
     document.querySelector('.score').textContent = score;
@@ -18,6 +17,7 @@ function updateScore() {
     }
 }
 
+// addEventListener of Check button
 document.querySelector('.check').addEventListener('click', 
     function() {
         const guess = Number(document.querySelector('.guess').value);
@@ -43,6 +43,7 @@ document.querySelector('.check').addEventListener('click',
     }
 )
 
+// addEventListener of Again button
 document.querySelector('.again').addEventListener
 ('click', function () {
     value = Math.trunc(Math.random() * 20) + 1;
